@@ -208,3 +208,5 @@ A table cell with optional alignment.
 - `align?: 'left' | 'center' | 'right'` — Text alignment (default: `'left'`).
 
 ## Usage Example
+
+[Sandbox](https://codesandbox.io/p/sandbox/7wtlkl)

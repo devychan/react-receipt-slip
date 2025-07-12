@@ -1,6 +1,6 @@
 {
   "name": "react-receipt-slip",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "The react-receipt-slip easiest to create a receipt template.\"",
   "keywords": [
     "React",
@@ -14,10 +14,10 @@
     "type": "git",
     "url": "git+https://github.com/devychan/react-receipt-slip.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "author": "devychan",
   "type": "module",
-  "main": "dist/Paper.js",
+  "main": "dist/Paper.cjs",
   "module": "dist/Paper.esm.js",
   "types": "dist/Paper.d.ts",
   "files": [

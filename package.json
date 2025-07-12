@@ -18,9 +18,13 @@
   "author": "devychan",
   "type": "module",
   "main": "dist/Paper.js",
+  "module": "dist/Paper.esm.js",
   "types": "dist/Paper.d.ts",
+  "files": [],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsup",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/react": "^19.1.8",

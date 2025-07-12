@@ -5,10 +5,10 @@ General use cases
 - Bank Transaction Receipt
 
 ## Documentation
-- [Documentation]()
-- [Examples]()
-- [About]()
-- [MIT]()
+- [Documentation](#receipt-ui-components)
+- [Examples](https://codesandbox.io/p/sandbox/7wtlkl)
+- [About](https://itsme-devychan.vercel.app)
+- [MIT](https://github.com/devychan/react-receipt-slip/blob/main/LICENSE)
 
 ## Installation
 
@@ -17,7 +17,6 @@ Run the following command
 ```bash
 npm install react-receipt-slip
 ```
-
 
 ```js
 import {

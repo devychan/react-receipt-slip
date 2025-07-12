@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { DotProps, PaperProps, RowTextProps, TableCellProps, TableRowProps, TextProps } from '.'
 

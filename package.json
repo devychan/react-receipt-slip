@@ -1,7 +1,7 @@
 {
   "name": "react-receipt-slip",
-  "version": "1.0.7",
-  "description": "The react-receipt-slip easiest to create a receipt template.\"",
+  "version": "1.0.8",
+  "description": "The react-receipt-slip easiest to create a receipt template.",
   "keywords": [
     "React",
     "Receipt"
@@ -16,16 +16,15 @@
   },
   "license": "MIT",
   "author": "devychan",
-  "type": "commonjs",
-  "main": "dist/Paper.cjs",
-  "module": "dist/Paper.esm.js",
-  "types": "dist/Paper.d.ts",
+  "main": "./dist/Paper.cjs",
+  "module": "./dist/Paper.mjs",
+  "types": "./dist/Paper.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsup",
+    "build": "npx tsup --format cjs,esm --dts",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {

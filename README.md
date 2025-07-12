@@ -140,8 +140,6 @@ export default Receipt
 
 ## Receipt UI Components
 
-## Components
-
 ### `<Paper>`
 
 A container representing the receipt paper.

@@ -1,0 +1,27 @@
+{
+  "name": "react-receipt-slip",
+  "version": "1.0.0",
+  "description": "The react-receipt-slip easiest to create a receipt template.\"",
+  "keywords": [
+    "React",
+    "Receipt"
+  ],
+  "homepage": "https://github.com/devychan/react-receipt-slip#readme",
+  "bugs": {
+    "url": "https://github.com/devychan/react-receipt-slip/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devychan/react-receipt-slip.git"
+  },
+  "license": "ISC",
+  "author": "devychan",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

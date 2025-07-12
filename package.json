@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "author": "devychan",
-  "type": "module",
+  "type": "commonjs",
   "main": "dist/Paper.cjs",
   "module": "dist/Paper.esm.js",
   "types": "dist/Paper.d.ts",

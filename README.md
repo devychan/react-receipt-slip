@@ -20,14 +20,26 @@ npm install react-receipt-slip
 
 
 ```js
+import {
+  DataTable,
+  Dot,
+  Line,
+  Paper,
+  RowText,
+  TableCell,
+  TableHead,
+  TableRow,
+  Text,
+} from "react-receipt-slip";
+
 const Receipt = () => {
     return <Paper>
         <Text align='center' bold>ABC Company</Text>
         <Text align='center'>Philippines, Manila. 1000</Text>
-        <Text align='center'>1111-1111-1111-1111-0000</Text>
-        <Text align='center'>11111111111111</Text>
-        <Text align='center'>(02) 743284327878</Text>
-        <Text align='center'>07/11/2024</Text>
+        <Text align='center'>TIN: 1111-1111-1111-1111-0000</Text>
+        <Text align='center'>MIN: 11111111111111</Text>
+        <Text align='center'>Contact: (02) 743284327878</Text>
+        <Text align='center'>Date Published: 07/11/2024</Text>
         <DataTable>
             <TableRow>
                 <TableCell><Text bold>CASH SALES</Text></TableCell>

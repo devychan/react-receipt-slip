@@ -1,6 +1,6 @@
 {
   "name": "react-receipt-slip",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The react-receipt-slip easiest to create a receipt template.\"",
   "keywords": [
     "React",
@@ -17,6 +17,8 @@
   "license": "ISC",
   "author": "devychan",
   "type": "module",
+  "main": "dist/Paper.js",
+  "types": "dist/Paper.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

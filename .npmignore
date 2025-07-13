@@ -4,3 +4,4 @@ src/
 *.d.ts
 tsconfig.json
 tsup.config.ts
+.npmrc

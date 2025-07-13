@@ -22,21 +22,126 @@ export namespace Property {
 }
 
 export interface DotProps {
+     /**
+     * @deprecated
+     * removed
+     */
     type?: Property.BorderStyle;
+    /**
+     * @deprecated
+     * use margin instead
+     */
     vmar?: [number, number];
+    /**
+     * ### New v1.1.0
+     * **Coordinates** [x, y]
+     * 
+     * @property
+     * margin
+     * 
+     * @example
+     * <Dot margin={[5, 5]} />
+     */
+    margin?: [number, number];
 }
 export const Dot: React.ComponentType<DotProps>;
 
 export interface RowTextProps {
+    /**
+     * @deprecated
+     * use pad instead
+     */
     pady?: number;
+    /**
+     * @deprecated
+     * use pad instead
+     */
     padx?: number;
+    /**
+     * @deprecated
+     * use space instead
+     */
     gap?: number;
+    /**
+     * ### New v1.1.0
+     * **Coordinates** [x, y]
+     * 
+     * @example
+     * <RowText padding={[5, 5]}>
+     *  <Text>Name</Text>
+     *  <Text>Age</Text>
+     * </RowText>
+     */
+    padding?: [number, number];
+    /**
+     * ### Version v1.0.9
+     * 
+     * Vertical alignment
+     * 
+     * @property
+     * valign
+     * 
+     * @example
+     * <RowText valign="center">
+     *  <Text>Name</Text>
+     *  <Text>Age</Text>
+     * </RowText>
+     */
     valign?: 'top' | 'bottom' | 'center';
+    /**
+     * ### New v1.1.0
+     * 
+     * @property
+     * rowGrap
+     * 
+     * @example
+     * <RowText space={10}>
+     *  <Text>Name</Text>
+     *  <Text>Age</Text>
+     * </RowText>
+     */
+    space?: number
+    /**
+     * ### New v1.1.0
+     * 
+     * @property
+     * justify
+     * 
+     * @example
+     * <RowText justify="center">
+     *  <Text>Name</Text>
+     *  <Text>Age</Text>
+     * </RowText>
+     */
+    justify?: "start" | "center" | "end"
 }
 export const RowText: React.ComponentType<RowTextProps>;
 
 export interface DataTableProps {
+    /**
+     * ### Version v1.0.9
+     * 
+     * @property
+     * bordered
+     * 
+     * @example
+     * <DataTable bordered>
+     *  ...
+     * </DataTable>
+     */
     bordered?: boolean;
+    /**
+     * ### New v1.1.0
+     * 
+     * @property
+     * margin
+     * 
+     * @example
+     * <DataTable collapse={false}>
+     * ...
+     * </DataTable>
+     */
+    collapse?: boolean
 }
 export const DataTable: React.ComponentType<DataTableProps>;
 
@@ -44,10 +149,32 @@ export interface TableRowProps {
     align?: 'left' | 'center' | 'right';
 }
 export const TableRow: React.ComponentType<TableRowProps>;
-
-export const TableHead: React.ComponentType<React.ThHTMLAttributes<HTMLTableCellElement>>;
+export interface TableHeadProps {}
+export const TableHead: React.ComponentType<TableHeadProps>;
 
 export interface TableCellProps {
+    /**
+    * Sets the horizontal alignment of text within the cell.
+    * 
+    * - `'left'`: Aligns text to the left (default for most table cells).
+    * - `'center'`: Centers the text horizontally.
+    * - `'right'`: Aligns text to the right, often used for numbers.
+    * 
+    * @example
+    * <TableCell align="center">Name</TableCell>
+    */
     align?: 'left' | 'center' | 'right';
 }
 export const TableCell: React.ComponentType<TableCellProps>;
+
+export interface SpaceProps {
+    /**
+     * **Coordinates** [x, y]
+     * @default [5, 5]
+     * 
+     * @example
+     * [10, 10]
+     */
+    size?: [number, number]
+}
+export const Space: React.ComponentType<SpaceProps>;

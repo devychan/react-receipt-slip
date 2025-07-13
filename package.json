@@ -1,10 +1,14 @@
 {
   "name": "react-receipt-slip",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "The react-receipt-slip easiest to create a receipt template.",
   "keywords": [
     "React",
-    "Receipt"
+    "Receipt",
+    "POS",
+    "react-receipt",
+    "pos-react",
+    "thermal-printer"
   ],
   "homepage": "https://github.com/devychan/react-receipt-slip#readme",
   "bugs": {

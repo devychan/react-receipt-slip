@@ -156,67 +156,100 @@ export default Receipt
 A container representing the receipt paper.
 
 **Props:**
-- `size?: number` — Width in mm (default: `80`).
+- `size?: number` — Width in **mm** (default: `80`).
+- Accepts any child elements like `<Text>`, `<Line>`, `<RowText>`, etc.
+
+---
 
 ### `<Text>`
 
 Styled text for receipt content.
 
 **Props:**
-- `align?: 'left' | 'center' | 'right'` — Text alignment (default: `'left'`).
+- `align?: 'left' | 'center' | 'right'` — Text alignment.
 - `bold?: boolean` — Bold text if `true`.
 - `underlined?: boolean` — Underlined text if `true`.
+
+---
 
 ### `<Line>`
 
 A horizontal dashed line for separating sections.
 
-_No props._
+**Props:**  
+_None_
+
+---
 
 ### `<Dot>`
 
-A horizontal rule with customizable border style and vertical margins.
+A thin horizontal element used for separating sections, with vertical spacing.
 
 **Props:**
-- `type?: Property.BorderStyle` — Border style (default: `'dashed'`).
-- `vmar?: [number, number]` — Vertical margins `[top, bottom]` in px.
+- `margin?: [number, number]` — **[top, bottom]** spacing in pixels. *(v1.1.0)*
+- `type?: Property.BorderStyle` — **@deprecated** Custom border style.
+- `vmar?: [number, number]` — **@deprecated** Use `margin` instead.
+
+---
 
 ### `<RowText>`
 
-A flex row for aligning multiple text elements.
+A horizontal layout for aligning multiple `<Text>` elements.
 
 **Props:**
-- `pady?: number` — Vertical padding in px.
-- `padx?: number` — Horizontal padding in px.
-- `gap?: number` — Gap between children in px.
-- `valign?: 'top' | 'bottom' | 'center'` — Vertical alignment (default: `'center'`).
+- `padding?: [number, number]` — Padding [x, y] in pixels. *(v1.1.0)*
+- `valign?: 'top' | 'bottom' | 'center'` — Vertical alignment of items. *(v1.0.9)*
+- `space?: number` — Space between items. *(v1.1.0)*
+- `justify?: 'start' | 'center' | 'end'` — Justify content horizontally. *(v1.1.0)*
+
+> ⚠️ **Deprecated props:**  
+> `pady`, `padx`, `gap` — Use `padding` and `space` instead.
+
+---
 
 ### `<DataTable>`
 
-A table for displaying tabular data.
+A styled block for rendering tabular data in receipt format.
 
 **Props:**
-- `bordered?: boolean` — (Not used in current styles.)
+- `bordered?: boolean` — Adds borders between rows/columns. *(v1.0.9)*
+- `collapse?: boolean` — Removes outer margins/padding. *(v1.1.0)*
+
+---
 
 ### `<TableRow>`
 
-A table row with optional alignment.
+Represents a single row in a `<DataTable>`.
 
 **Props:**
-- `align?: 'left' | 'center' | 'right'` — Text alignment (default: `'left'`).
+- `align?: 'left' | 'center' | 'right'` — Default alignment for child `<TableCell>`s.
+
+---
 
 ### `<TableHead>`
 
-A table header cell with dashed borders.
+Represents the table heading area.
 
-_No props._
+**Props:**  
+_None_
+
+---
 
 ### `<TableCell>`
 
-A table cell with optional alignment.
+A single cell inside a `<TableRow>`.
 
 **Props:**
-- `align?: 'left' | 'center' | 'right'` — Text alignment (default: `'left'`).
+- `align?: 'left' | 'center' | 'right'` — Horizontal alignment of content.
+
+---
+
+### `<Space>`
+
+A helper spacer for vertical and horizontal gaps.
+
+**Props:**
+- `size?: [number, number]` — **[x, y]** space in pixels. Default: `[5, 5]`
 
 ## Usage Example
 

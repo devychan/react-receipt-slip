@@ -22,10 +22,10 @@ export namespace Property {
 }
 
 export interface DotProps {
-     /**
-     * @deprecated
-     * removed
-     */
+    /**
+    * @deprecated
+    * removed
+    */
     type?: Property.BorderStyle;
     /**
      * @deprecated
@@ -113,7 +113,7 @@ export interface RowTextProps {
      *  <Text>Age</Text>
      * </RowText>
      */
-    justify?: "start" | "center" | "end"
+    justify?: "start" | "center" | "between" | "end"
 }
 export const RowText: React.ComponentType<RowTextProps>;
 
@@ -149,7 +149,7 @@ export interface TableRowProps {
     align?: 'left' | 'center' | 'right';
 }
 export const TableRow: React.ComponentType<TableRowProps>;
-export interface TableHeadProps {}
+export interface TableHeadProps { }
 export const TableHead: React.ComponentType<TableHeadProps>;
 
 export interface TableCellProps {

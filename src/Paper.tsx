@@ -41,7 +41,7 @@ export const RowText = styled.div<RowTextProps>`
                 return 'center'
             }
         }
-        return 'center'
+        return 'left'
     }};
     justify-content: ${(props) => {
         if (props.justify) {
@@ -49,11 +49,13 @@ export const RowText = styled.div<RowTextProps>`
                 return 'flex-start'
             } else if (props.justify === "end") {
                 return 'flex-end'
-            } else {
+            } else if (props.justify === "center") {
                 return 'center'
+            } else {
+                return 'space-between'
             }
         }
-        return 'center'
+        return 'space-between'
     }};
     gap: ${(props) => {
         if (props.gap) {

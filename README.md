@@ -200,7 +200,7 @@ A horizontal layout for aligning multiple `<Text>` elements.
 - `padding?: [number, number]` — Padding [x, y] in pixels. *(v1.1.0)*
 - `valign?: 'top' | 'bottom' | 'center'` — Vertical alignment of items. *(v1.0.9)*
 - `space?: number` — Space between items. *(v1.1.0)*
-- `justify?: 'start' | 'center' | 'end'` — Justify content horizontally. *(v1.1.0)*
+- `justify?: 'start' | 'center' | 'between | 'end'` — Justify content horizontally. *(v1.1.0)*
 
 > ⚠️ **Deprecated props:**  
 > `pady`, `padx`, `gap` — Use `padding` and `space` instead.

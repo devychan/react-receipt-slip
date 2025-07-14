@@ -1,26 +1,57 @@
 import * as React from 'react';
 export interface PaperProps extends React.PropsWithChildren {
     /**
-     * Size in mm
-     * default 80mm
+     * Typical size in mm
+     * @default
+     * 80
      */
     size?: number;
 }
 export const Paper: React.ComponentType<PaperProps>;
 
 export interface TextProps {
+    /**
+     * @default
+     * 'left'
+     */
     align?: 'left' | 'center' | 'right';
+    /**
+     * @default
+     * false
+     */
     bold?: boolean;
+    /**
+     * @default
+     * false
+     */
     underlined?: boolean;
+    /**
+     * ### New v1.1.1
+     * 
+     * @default
+     * false
+     */
+    italic?: boolean
 }
 export const Text: React.ComponentType<TextProps>;
 
-export const Line: React.ComponentType<React.HTMLAttributes<HTMLDivElement>>;
-
+export interface LineProps {
+    /**
+     * ### New v1.1.1
+     * **Coordinates** [x, y]
+     * 
+     * @property
+     * margin
+     * 
+     * @example
+     * <Line margin={[5, 5]} />
+     */
+    margin?: [number, number];
+}
+export const Line: React.ComponentType<LineProps>;
 export namespace Property {
     type BorderStyle = 'none' | 'hidden' | 'dotted' | 'dashed' | 'solid' | 'double' | 'groove' | 'ridge' | 'inset' | 'outset';
 }
-
 export interface DotProps {
     /**
     * @deprecated

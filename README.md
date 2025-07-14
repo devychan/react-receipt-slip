@@ -1,16 +1,31 @@
 ## React Receipt Slip
+**The react-receipt-slip easiest way to create a receipt template.**
 
 General use cases
 - POS Receipt
 - Bank Transaction Receipt
+- Transportation Ticket Receipt
 
-## Documentation
+### Documentation
 - [Documentation](#receipt-ui-components)
+- [Requirements](#requirements)
+- [Installation](#installation)
 - [Examples](https://codesandbox.io/p/sandbox/7wtlkl)
-- [About](https://itsme-devychan.vercel.app)
+- [About me](https://itsme-ychan.vercel.app)
 - [MIT](https://github.com/devychan/react-receipt-slip/blob/main/LICENSE)
 
-## Installation
+### Sample Output
+![Image](./assets/sample-image.png)
+
+### Requirements
+
+```bash
+Node - ^22.x.x
+React - ^18.x.x
+```
+---
+
+### Installation
 
 Run the following command
 
@@ -151,7 +166,7 @@ export default Receipt
 
 ## Receipt UI Components
 
-### `<Paper>`
+#### `<Paper>`
 
 A container representing the receipt paper.
 
@@ -161,7 +176,7 @@ A container representing the receipt paper.
 
 ---
 
-### `<Text>`
+#### `<Text>`
 
 Styled text for receipt content.
 
@@ -169,30 +184,28 @@ Styled text for receipt content.
 - `align?: 'left' | 'center' | 'right'` — Text alignment.
 - `bold?: boolean` — Bold text if `true`.
 - `underlined?: boolean` — Underlined text if `true`.
+- `italic?: boolean` — Italized text if `true`. *(v1.1.1)*
 
 ---
 
-### `<Line>`
+#### `<Line>`
 
 A horizontal dashed line for separating sections.
 
-**Props:**  
-_None_
+**Props:**
+- `margin?: [number, number]` — **[x, y]** spacing in pixels. *(v1.1.1)*
 
 ---
 
-### `<Dot>`
+#### `<Dot>`
 
 A thin horizontal element used for separating sections, with vertical spacing.
 
 **Props:**
-- `margin?: [number, number]` — **[top, bottom]** spacing in pixels. *(v1.1.0)*
-- `type?: Property.BorderStyle` — **@deprecated** Custom border style.
-- `vmar?: [number, number]` — **@deprecated** Use `margin` instead.
-
+- `margin?: [number, number]` — **[x, y]** spacing in pixels. *(v1.1.0)*
 ---
 
-### `<RowText>`
+#### `<RowText>`
 
 A horizontal layout for aligning multiple `<Text>` elements.
 
@@ -202,12 +215,9 @@ A horizontal layout for aligning multiple `<Text>` elements.
 - `space?: number` — Space between items. *(v1.1.0)*
 - `justify?: 'start' | 'center' | 'between | 'end'` — Justify content horizontally. *(v1.1.0)*
 
-> ⚠️ **Deprecated props:**  
-> `pady`, `padx`, `gap` — Use `padding` and `space` instead.
-
 ---
 
-### `<DataTable>`
+#### `<DataTable>`
 
 A styled block for rendering tabular data in receipt format.
 
@@ -217,7 +227,7 @@ A styled block for rendering tabular data in receipt format.
 
 ---
 
-### `<TableRow>`
+#### `<TableRow>`
 
 Represents a single row in a `<DataTable>`.
 
@@ -226,7 +236,7 @@ Represents a single row in a `<DataTable>`.
 
 ---
 
-### `<TableHead>`
+#### `<TableHead>`
 
 Represents the table heading area.
 
@@ -235,7 +245,7 @@ _None_
 
 ---
 
-### `<TableCell>`
+#### `<TableCell>`
 
 A single cell inside a `<TableRow>`.
 
@@ -244,7 +254,7 @@ A single cell inside a `<TableRow>`.
 
 ---
 
-### `<Space>`
+#### `<Space>`
 
 A helper spacer for vertical and horizontal gaps.
 

@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-    entry: ['src/Paper.tsx'],
+    entry: ['src/Paper.tsx', 'src/jsonify.ts'],
     format: ['esm', 'cjs'],
     dts: true,
     clean: true,

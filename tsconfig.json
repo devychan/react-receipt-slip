@@ -1,6 +1,7 @@
 {
   "include": [
-    "src/**/*.tsx"
+    "src/**/*.tsx",
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules"

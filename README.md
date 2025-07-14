@@ -4,16 +4,26 @@
 General use cases
 - POS Receipt
 - Bank Transaction Receipt
-- Transportation ticketing
+- Transportation Ticket Receipt
 
 ### Documentation
 - [Documentation](#receipt-ui-components)
+- [Requirements](#requirements)
+- [Installation](#installation)
 - [Examples](https://codesandbox.io/p/sandbox/7wtlkl)
-- [My Portfolio](https://itsme-ychan.vercel.app)
+- [About me](https://itsme-ychan.vercel.app)
 - [MIT](https://github.com/devychan/react-receipt-slip/blob/main/LICENSE)
 
 ### Sample Output
 ![Image](./assets/sample-image.png)
+
+### Requirements
+
+```bash
+Node - ^22.x.x
+React - ^18.x.x
+```
+---
 
 ### Installation
 

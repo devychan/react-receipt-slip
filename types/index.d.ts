@@ -71,7 +71,7 @@ export interface DotProps {
      * margin
      * 
      * @example
-     * <Dot margin={[5, 5]} />
+     * <Dot margin={[0, 0]} />
      */
     margin?: [number, number];
 }

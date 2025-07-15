@@ -5,7 +5,9 @@ export const Paper = styled.div<PaperProps>`
     max-width: ${(props) => props.size ?? 80}mm;
     width: 100%;
 `
-export const Text = styled.div<TextProps>`
+export const Text = styled.div.withConfig({
+    shouldForwardProp: (props) => !['bold', 'underlined', 'italic'].includes(props)
+})<TextProps>`
     font-family: monospace;
     text-align: ${(props) => props.align ?? 'left'};
     font-weight: ${(props) => props.bold ? 'bold' : 'normal'};
@@ -20,19 +22,21 @@ export const Line = styled.div<LineProps>`
         if (props.margin && props.margin.length === 2) {
             return `${props.margin[1]}px ${props.margin[0]}px`
         }
-        return '0px 0px 2px 0px'
+        return '0px 0px 5px 0px'
     }};
 `
 export const Dot = styled.hr<DotProps>`
     border: 0.5px ${(props) => props.type ?? 'dotted'} gray;
-    margin-top: ${(props) => props.vmar ? props.vmar[0] : 0}px;
-    margin-bottom: ${(props) => props.vmar ? props.vmar[1] : 0}px;
-    
     margin: ${(props) => {
         if (props.margin && props.margin.length === 2) {
-            return `${props.margin[1]}px ${props.margin[0]}px`
+            const [y, x] = props.margin
+            return `${y}px ${x}px`
         }
-        return '5px 5px'
+        if (props.vmar && props.vmar.length === 2) {
+            const [top, bottom] = props.vmar
+            return `${top}px 0px ${bottom}px 0px`
+        }
+        return '0px'
     }};
 `
 export const RowText = styled.div<RowTextProps>`
@@ -72,15 +76,14 @@ export const RowText = styled.div<RowTextProps>`
         }
         return '0px 5px'
     }};
-    padding-top: ${(props) => props.pady ?? 0}px;
-    padding-right: ${(props) => props.padx ?? 0}px;
-    padding-bottom: ${(props) => props.pady ?? 0}px;
-    padding-left: ${(props) => props.padx ?? 0}px;
-    margin: ${(props) => {
-        if (props.padding) {
-            return `${props.padding[1]}px ${props.padding[0]}px`
+    padding: ${(props) => {
+        if (props.padding && props.padding.length === 2) {
+            const [x, y] = props.padding;
+            return `${y}px ${x}px`;
         }
-        return '5px 5px'
+        const pady = props.pady ?? 0;
+        const padx = props.padx ?? 0;
+        return `${pady}px ${padx}px`;
     }};
 `
 export const DataTable = styled.table<DataTableProps>`
@@ -104,19 +107,21 @@ export const TableHead = styled.th<TableHeadProps>`
     font-family: monospace;
     padding: 0px 5px;
 `
-export const TableCell = styled.td<TableCellProps & TextProps>`
+export const TableCell = styled.td.withConfig({
+    shouldForwardProp: (props) => !['bold', 'underlined', 'italic'].includes(props)
+}) <TableCellProps & TextProps>`
     font-family: monospace;
     text-align: ${(props) => props.align ?? 'left'};
     font-style: ${(props) => props.italic ? 'italic' : 'normal'};
-    font-weight: ${(props) => props.bold ? '500' : 'normal'};
+    font-weight: ${(props) => props.bold === true ? '500' : 'normal'};
     text-decoration: ${(props) => props.underlined ? 'underline' : 'unset'};
 `
 export const Space = styled.div<SpaceProps>`
     margin: ${(props) => {
         if (props.size && props.size.length === 2) {
-            return `${props.size[1]}px ${props.size[0]}px;`
-        } else {
-            return `5px 5px;`
+            const [y, x] = props.size
+            return `${y}px ${x}px`
         }
-    }}
+        return '5px 0px'
+    }};
 `

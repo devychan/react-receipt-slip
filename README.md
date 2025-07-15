@@ -48,116 +48,155 @@ import {
 
 const Receipt = () => {
     return <Paper>
-        <Text align='center' bold>ABC Company</Text>
-        <Text align='center'>Philippines, Manila. 1000</Text>
-        <Text align='center'>TIN: 1111-1111-1111-1111-0000</Text>
-        <Text align='center'>MIN: 11111111111111</Text>
-        <Text align='center'>Contact: (02) 743284327878</Text>
-        <Text align='center'>Date Published: 07/11/2024</Text>
-        <DataTable>
-            <TableRow>
-                <TableCell><Text bold>CASH SALES</Text></TableCell>
-                <TableCell><Text align='right'>Customer</Text></TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell><Text bold>POS-0001</Text></TableCell>
-                <TableCell><Text align='right'>Walk-in</Text></TableCell>
-            </TableRow>
-        </DataTable>
-        <DataTable>
-            <TableRow>
-                <TableHead align='center'>ITEM</TableHead>
-                <TableHead align='center'>QTY</TableHead>
-                <TableHead align='right'>Price</TableHead>
-                <TableHead align='right'>Amount</TableHead>
-            </TableRow>
-            <TableRow>
-                <TableCell>Signature Black Forest</TableCell>
-                <TableCell align='center'>1</TableCell>
-                <TableCell align='right'>1,299</TableCell>
-                <TableCell align='right'>1,299</TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell>Classic Ube Cake</TableCell>
-                <TableCell align='center'>1</TableCell>
-                <TableCell align='right'>1,245</TableCell>
-                <TableCell align='right'>1,245</TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell>Mango Magnifico</TableCell>
-                <TableCell align='center'>1</TableCell>
-                <TableCell align='right'>1,213</TableCell>
-                <TableCell align='right'>1,213</TableCell>
-            </TableRow>
-        </DataTable>
-        <RowText>
-            <Text bold>TOTAL</Text>
-            <Text>3,757</Text>
-        </RowText>
-        <Dot />
-        <DataTable>
-            <TableRow>
-                <TableCell><Text bold>CASH Received</Text></TableCell>
-                <TableCell><Text align='right'>4,000</Text></TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell><Text bold>CHANGE</Text></TableCell>
-                <TableCell><Text align='right'>243</Text></TableCell>
-            </TableRow>
-        </DataTable>
-        <Dot margin={[5, 5]} />
-        <DataTable>
-            <TableRow>
-                <TableCell><Text bold>VATABLE SALES (12%)</Text></TableCell>
-                <TableCell><Text align='center'>:</Text></TableCell>
-                <TableCell><Text align='right'>402.54</Text></TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell><Text bold>NON-VAT SALES</Text></TableCell>
-                <TableCell><Text align='center'>:</Text></TableCell>
-                <TableCell><Text align='right'>-</Text></TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell><Text bold>ZERO-RATED SALES</Text></TableCell>
-                <TableCell><Text align='center'>:</Text></TableCell>
-                <TableCell><Text align='right'>-</Text></TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell><Text bold>VAT EXEMPT SALES</Text></TableCell>
-                <TableCell><Text align='center'>:</Text></TableCell>
-                <TableCell><Text align='right'>-</Text></TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell><Text bold>VATABLE SALES</Text></TableCell>
-                <TableCell><Text align='center'>:</Text></TableCell>
-                <TableCell><Text align='right'>-</Text></TableCell>
-            </TableRow>
-        </DataTable>
-        <Dot margin={[10, 10]} />
-        <Text bold>OR No.: 00000023</Text>
-        <Text bold>Date Time: 2025-07-12 10:25 AM</Text>
-        <Dot margin={[10, 10]} />
-        <RowText valign='bottom'>
-            <Text>Customer: </Text>
-            <Line />
-        </RowText>
-        <RowText valign='bottom'>
-            <Text>Address: </Text>
-            <Line />
-        </RowText>
-        <RowText valign='bottom'>
-            <Text>TIN: </Text>
-            <Line />
-        </RowText>
-        <RowText valign='bottom'>
-            <Text>Signature: </Text>
-            <Line />
-        </RowText>
-        <Dot margin={[20, 0]} />
-        <Text align='center'>**Thank you for your business!**</Text>
-        <Dot margin={[5, 5]} />
-        <Text align='center'>Please keep this receipt for your records.</Text>
-        <Dot margin={[0, 0]} />
+      <Text align="center" bold>
+        ABC Company
+      </Text>
+      <Text align="center">Philippines, Manila. 1000</Text>
+      <Text align="center">TIN: 1111-1111-1111-1111-0000</Text>
+      <Text align="center">MIN: 11111111111111</Text>
+      <Text align="center">Contact: (02) 743284327878</Text>
+      <Text align="center">Date Published: 07/11/2024</Text>
+      <DataTable>
+        <TableRow>
+          <TableCell>
+            <Text bold>CASH SALES</Text>
+          </TableCell>
+          <TableCell>
+            <Text align="right">Customer</Text>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <Text bold>POS-0001</Text>
+          </TableCell>
+          <TableCell>
+            <Text align="right">Walk-in</Text>
+          </TableCell>
+        </TableRow>
+      </DataTable>
+      <DataTable>
+        <TableRow>
+          <TableHead align="center">ITEM</TableHead>
+          <TableHead align="center">QTY</TableHead>
+          <TableHead align="right">Price</TableHead>
+          <TableHead align="right">Amount</TableHead>
+        </TableRow>
+        <TableRow>
+          <TableCell>Signature Black Forest</TableCell>
+          <TableCell align="center">1</TableCell>
+          <TableCell align="right">1,299</TableCell>
+          <TableCell align="right">1,299</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Classic Ube Cake</TableCell>
+          <TableCell align="center">1</TableCell>
+          <TableCell align="right">1,245</TableCell>
+          <TableCell align="right">1,245</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Mango Magnifico</TableCell>
+          <TableCell align="center">1</TableCell>
+          <TableCell align="right">1,213</TableCell>
+          <TableCell align="right">1,213</TableCell>
+        </TableRow>
+      </DataTable>
+      <RowText>
+        <Text bold>TOTAL</Text>
+        <Text>3,757</Text>
+      </RowText>
+      <Dot />
+      <DataTable>
+        <TableRow>
+          <TableCell>
+            <Text bold>CASH Received</Text>
+          </TableCell>
+          <TableCell>
+            <Text align="right">4,000</Text>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <Text bold>CHANGE</Text>
+          </TableCell>
+          <TableCell>
+            <Text align="right">243</Text>
+          </TableCell>
+        </TableRow>
+      </DataTable>
+      <Dot />
+      <DataTable>
+        <TableRow>
+          <TableCell>
+            <Text bold>VAT (12%)</Text>
+          </TableCell>
+          <TableCell>
+            <Text align="center">:</Text>
+          </TableCell>
+          <TableCell>
+            <Text align="right">402.54</Text>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <Text bold>NON-VAT SALES</Text>
+          </TableCell>
+          <TableCell>
+            <Text align="center">:</Text>
+          </TableCell>
+          <TableCell>
+            <Text align="right">-</Text>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <Text bold>ZERO-RATED SALES</Text>
+          </TableCell>
+          <TableCell>
+            <Text align="center">:</Text>
+          </TableCell>
+          <TableCell>
+            <Text align="right">-</Text>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>
+            <Text bold>VAT EXEMPT SALES</Text>
+          </TableCell>
+          <TableCell>
+            <Text align="center">:</Text>
+          </TableCell>
+          <TableCell>
+            <Text align="right">-</Text>
+          </TableCell>
+        </TableRow>
+      </DataTable>
+      <Dot margin={[5, 0]} />
+      <Text bold>OR No.: 00000023</Text>
+      <Text bold>Date Time: 2025-07-12 10:25 AM</Text>
+      <Dot margin={[5, 0]} />
+      <Space size={[10, 10]} />
+      <RowText valign="bottom">
+        <Text>Customer: </Text>
+        <Line />
+      </RowText>
+      <RowText valign="bottom">
+        <Text>Address: </Text>
+        <Line />
+      </RowText>
+      <RowText valign="bottom">
+        <Text>TIN: </Text>
+        <Line />
+      </RowText>
+      <RowText valign="bottom">
+        <Text>Signature: </Text>
+        <Line />
+      </RowText>
+      <Space size={[20, 10]} />
+      <Dot margin={[5, 0]} />
+      <Text align="center">**Thank you for your business!**</Text>
+      <Dot margin={[5, 5]} />
+      <Text align="center">Please keep this receipt for your records.</Text>
+      <Dot margin={[0, 0]} />
     </Paper>
 }
 export default Receipt

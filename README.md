@@ -105,7 +105,7 @@ const Receipt = () => {
                 <TableCell><Text align='right'>243</Text></TableCell>
             </TableRow>
         </DataTable>
-        <Dot vmar={[5, 5]} />
+        <Dot margin={[5, 5]} />
         <DataTable>
             <TableRow>
                 <TableCell><Text bold>VATABLE SALES (12%)</Text></TableCell>
@@ -133,10 +133,10 @@ const Receipt = () => {
                 <TableCell><Text align='right'>-</Text></TableCell>
             </TableRow>
         </DataTable>
-        <Dot vmar={[10, 10]} />
+        <Dot margin={[10, 10]} />
         <Text bold>OR No.: 00000023</Text>
         <Text bold>Date Time: 2025-07-12 10:25 AM</Text>
-        <Dot vmar={[10, 10]} />
+        <Dot margin={[10, 10]} />
         <RowText valign='bottom'>
             <Text>Customer: </Text>
             <Line />
@@ -153,11 +153,11 @@ const Receipt = () => {
             <Text>Signature: </Text>
             <Line />
         </RowText>
-        <Dot vmar={[20, 0]} />
+        <Dot margin={[20, 0]} />
         <Text align='center'>**Thank you for your business!**</Text>
-        <Dot vmar={[5, 5]} />
+        <Dot margin={[5, 5]} />
         <Text align='center'>Please keep this receipt for your records.</Text>
-        <Dot vmar={[0, 0]} />
+        <Dot margin={[0, 0]} />
     </Paper>
 }
 export default Receipt

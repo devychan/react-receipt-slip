@@ -17,7 +17,7 @@ export const Line = styled.div<LineProps>`
     width: 100%;
     height: 0px;
     margin: ${(props) => {
-        if (props.margin) {
+        if (props.margin && props.margin.length === 2) {
             return `${props.margin[1]}px ${props.margin[0]}px`
         }
         return '0px 0px 2px 0px'
@@ -29,7 +29,7 @@ export const Dot = styled.hr<DotProps>`
     margin-bottom: ${(props) => props.vmar ? props.vmar[1] : 0}px;
     
     margin: ${(props) => {
-        if (props.margin) {
+        if (props.margin && props.margin.length === 2) {
             return `${props.margin[1]}px ${props.margin[0]}px`
         }
         return '5px 5px'
@@ -113,7 +113,7 @@ export const TableCell = styled.td<TableCellProps & TextProps>`
 `
 export const Space = styled.div<SpaceProps>`
     margin: ${(props) => {
-        if (props.size) {
+        if (props.size && props.size.length === 2) {
             return `${props.size[1]}px ${props.size[0]}px;`
         } else {
             return `5px 5px;`

@@ -77,6 +77,21 @@ export interface DotProps {
 }
 export const Dot: React.ComponentType<DotProps>;
 
+export interface DashProps {
+    /**
+     * ### New v1.1.4
+     * **Coordinates** [x, y]
+     * 
+     * @property
+     * margin
+     * 
+     * @example
+     * <Dash margin={[0, 0]} />
+     */
+    margin?: [number, number];
+}
+export const Dash: React.ComponentType<DashProps>;
+
 export interface RowTextProps {
     /**
      * @deprecated

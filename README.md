@@ -244,6 +244,14 @@ A thin horizontal element used for separating sections, with vertical spacing.
 - `margin?: [number, number]` — **[x, y]** spacing in pixels. *(v1.1.0)*
 ---
 
+#### `<Dash>` *(v1.1.4)*
+
+A thin horizontal element used for separating sections, with vertical spacing.
+
+**Props:**
+- `margin?: [number, number]` — **[x, y]** spacing in pixels.
+---
+
 #### `<RowText>`
 
 A horizontal layout for aligning multiple `<Text>` elements.

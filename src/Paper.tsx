@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { DataTableProps, DotProps, LineProps, PaperProps, RowTextProps, SpaceProps, TableCellProps, TableHeadProps, TableRowProps, TextProps } from '../types'
+import { DashProps, DataTableProps, DotProps, LineProps, PaperProps, RowTextProps, SpaceProps, TableCellProps, TableHeadProps, TableRowProps, TextProps } from '../types'
 
 export const Paper = styled.div<PaperProps>`
     max-width: ${(props) => props.size ?? 80}mm;
@@ -7,8 +7,9 @@ export const Paper = styled.div<PaperProps>`
 `
 export const Text = styled.div.withConfig({
     shouldForwardProp: (props) => !['bold', 'underlined', 'italic'].includes(props)
-})<TextProps>`
+}) <TextProps>`
     font-family: monospace;
+    font-size: 12;
     text-align: ${(props) => props.align ?? 'left'};
     font-weight: ${(props) => props.bold ? 'bold' : 'normal'};
     text-decoration: ${(props) => props.underlined ? 'underline' : 'unset'};
@@ -35,6 +36,16 @@ export const Dot = styled.hr<DotProps>`
         if (props.vmar && props.vmar.length === 2) {
             const [top, bottom] = props.vmar
             return `${top}px 0px ${bottom}px 0px`
+        }
+        return '0px'
+    }};
+`
+export const Dash = styled.hr<DashProps>`
+    border: 0.5px dashed gray;
+    margin: ${(props) => {
+        if (props.margin && props.margin.length === 2) {
+            const [y, x] = props.margin
+            return `${y}px ${x}px`
         }
         return '0px'
     }};
